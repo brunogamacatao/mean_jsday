@@ -1,0 +1,18 @@
+{
+  "name": "meu_projeto",
+  "version": "1.0.0",
+  "description": "Meu Projeto suporte a NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Gama Catao",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "colors": "^1.1.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13",
+    "mongoose-api": "0.0.2"
+  }
+}

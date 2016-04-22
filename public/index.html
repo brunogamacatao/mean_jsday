@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="loja">
+<head>
+  <title>Lista de Produtos</title>
+  <script src="/angular/angular.js"></script>
+  <script src="/angular-resource/angular-resource.js"></script>
+  <script src="/js/app.js"></script>
+</head>
+<body ng-controller="lojaCtrl">
+  <h1>Produto</h1>
+  <form ng-submit="cadastrarProduto()">
+    <p><label>Código:</label><input ng-model="produto.cod"></input></p>
+    <p><label>Nome:</label><input ng-model="produto.nome"></input></p>
+    <p><label>Qtd:</label><input ng-model="produto.qtd"></input></p>
+    <p>
+      <input type="button" value="Novo" ng-click="novo()"></input>
+      <input type="submit" value="Cadastrar" ng-hide="produto._id"></input>
+      <input type="button" value="Atualizar" 
+        ng-click="atualizar" ng-show="produto._id"></input>
+    </p>
+  </form>
+  <hr/>
+  <h1>Lista de Produtos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th><th>Nome</th><th>Quantidade</th><th>Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in produtos">
+        <td>{{p.cod}}</td>
+        <td>{{p.nome}}</td>
+        <td>{{p.qtd}}</td>
+        <td><a href="#" ng-click="editar(p)">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
